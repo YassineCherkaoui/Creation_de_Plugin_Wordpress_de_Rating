@@ -209,8 +209,8 @@ add_action( 'template_redirect', 'rc_check_for_rating' );
  * @return void 
  */
 function rc_rating_scripts() { 
-    wp_enqueue_style( 'rating-css', plugin_dir_url( __FILE__ ) . 'style.css', array(), '', 'screen' );
-    wp_register_script( 'rating-js', plugin_dir_url( __FILE__ ) . 'Script.js', array('jquery'), '', true );
+    wp_enqueue_style( 'rating-css', plugin_dir_url( __FILE__ ) . 'css/style.css', array(), '', 'screen' );
+    wp_register_script( 'rating-js', plugin_dir_url( __FILE__ ) . 'js/Script.js', array('jquery'), '', true );
     wp_localize_script( 'rating-js', 'rc_object', array(
         'ajax_url' => admin_url( 'admin-ajax.php' ),
         'nonce'    => wp_create_nonce( 'rc_rating' ),
